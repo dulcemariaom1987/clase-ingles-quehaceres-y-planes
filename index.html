@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unit 4: Tareas del hogar y planes</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f1f4ff;--tx:#1d1b3a;--card:#fff;--c1:#ff5d73;--c2:#ffb800;--c3:#18b9a6;--c4:#7b5cff;--ok:#0e9f6e;--bad:#e02f4a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15132b;--tx:#f2f0ff;--card:#241f4a}}
+:root[data-theme="dark"]{--bg:#15132b;--tx:#f2f0ff;--card:#241f4a}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:500 20px/1.5 Nunito,Arial,sans-serif}
+h1,h2,h3{font-family:'Baloo 2',Arial,sans-serif;line-height:1.1;margin:.2em 0}
+.hero{background:linear-gradient(120deg,var(--c4),var(--c1));color:#fff;padding:40px 20px;text-align:center}
+.hero h1{font-size:clamp(34px,7vw,64px)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:8px;overflow-x:auto;padding:10px;background:var(--bg)}
+nav a{white-space:nowrap;padding:8px 16px;border-radius:99px;color:#fff;text-decoration:none;font-weight:700}
+main{max-width:860px;margin:auto;padding:12px}
+section{background:var(--card);border-radius:24px;padding:22px;margin:22px 0;border-top:10px solid var(--c)}
+section h2{font-size:clamp(28px,5vw,40px);color:var(--c)}
+.box{background:color-mix(in srgb,var(--c) 14%,transparent);border-radius:16px;padding:14px 18px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.sp{font:inherit;font-weight:700;border:0;border-radius:14px;padding:10px 14px;background:var(--c);color:#fff;cursor:pointer;text-align:left}
+.sp small{display:block;font-weight:500;opacity:.95}
+.ab{border:0;border-radius:50%;width:40px;height:40px;background:var(--c);cursor:pointer;font-size:18px}
+.ex{border:3px dashed var(--c);border-radius:20px;padding:14px;margin:18px 0}
+.ex h3{font-size:26px}
+.it{padding:10px 0;border-bottom:1px solid #8883}
+.q{display:inline}
+input,select{font:inherit;padding:4px 8px;border:2px solid var(--c);border-radius:10px;background:var(--bg);color:var(--tx);max-width:100%}
+input{width:9em}
+.fb{font-size:17px;margin-top:4px}.ok{color:var(--ok)}.no{color:var(--bad)}
+.bt{font:inherit;font-weight:700;border:0;border-radius:14px;padding:10px 18px;margin:8px 6px 0 0;background:var(--c);color:#fff;cursor:pointer}
+.bt.g{background:#8886}
+button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--tx);outline-offset:2px}
+</style></head><body>
+<header class="hero"><h1>Unit 4: Household Chores &amp; Plans</h1><p>Tareas del hogar, adjetivos -ed / -ing, <i>have to</i>, <i>will</i> y <i>going to</i><br>🔊 Toca cualquier botón con sonido para escuchar inglés americano.</p></header>
+<nav>
+<a href="#v" style="background:var(--c1)">1. Vocabulario</a><a href="#a" style="background:#d99a00">2. -ed / -ing</a><a href="#g" style="background:#0f9a8a">3. Grammar</a><a href="#t" style="background:var(--c4)">4. Tarea</a></nav>
+<main>
+<section id="v" style="--c:var(--c1)"><h2>1. Household Chores 🏠</h2>
+<p>Las <b>chores</b> son las tareas de la casa. Toca cada frase para escucharla:</p>
+<div class="grid" id="words"></div>
+<div class="box"><b>Tip:</b> usamos <b>make</b> para crear (make dinner, make your bed), <b>clean</b> para limpiar, y <b>do</b> para tareas generales (do the shopping, do the dusting).</div>
+<div id="e1"></div><div id="e2"></div><div id="e3"></div></section>
+
+<section id="a" style="--c:#d99a00"><h2>2. Adjetivos -ed y -ing 😄</h2>
+<div class="box"><b>-ed</b> = cómo <b>me siento</b>: <button class="sp" data-t="I am tired.">I am tired 🔊<small>Estoy cansado</small></button><br><b>-ing</b> = cómo <b>es</b> algo/alguien: <button class="sp" data-t="This homework is tiring.">This homework is tiring 🔊<small>Esta tarea es agotadora</small></button></div>
+<div class="grid" id="adj"></div>
+<div id="e4"></div><div id="e5"></div></section>
+
+<section id="g" style="--c:#0f9a8a"><h2>3. Grammar 📘</h2>
+<h3>A) have to = tener que</h3>
+<div class="box">Con <b>I, you, we, they</b> → <b>have to</b>. Con <b>he, she, it</b> → <b>has to</b>.<br>Negativo: <b>don't / doesn't have to</b> = "no hace falta".<br>Pregunta: <b>Do / Does</b> + sujeto + <b>have to</b>?<br>
+<button class="sp" data-t="He has to clean the bathroom.">He has to clean the bathroom 🔊<small>Él tiene que limpiar el baño</small></button></div>
+<div id="e6"></div><div id="e7"></div>
+<h3>B) will y going to</h3>
+<div class="box"><b>going to</b> = plan que ya decidiste antes: <button class="sp" data-t="I'm going to finish my book today.">I'm going to finish my book 🔊<small>Voy a terminar mi libro</small></button><br><b>will ('ll)</b> = decisión en el momento, promesa u oferta: <button class="sp" data-t="I'll bring the laundry in.">I'll bring the laundry in 🔊<small>Voy a entrar la ropa</small></button></div>
+<div id="e8"></div><div id="e9"></div><div id="e10"></div></section>
+
+<section id="t" style="--c:var(--c4)"><h2>4. Tarea 📝</h2><p>Practica solo. ¡Puedes escuchar cada frase!</p>
+<div id="h1"></div><div id="h2"></div><div id="h3"></div></section>
+</main>
+<script>
+function sp(t){try{speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=.85;var v=speechSynthesis.getVoices().filter(function(x){return x.lang&&x.lang.replace('_','-')==='en-US'})[0];if(v)u.voice=v;speechSynthesis.speak(u)}catch(e){}}
+document.addEventListener('click',function(e){var b=e.target.closest('.sp[data-t]');if(b)sp(b.dataset.t)});
+function card(box,arr){var h='';arr.forEach(function(w){h+='<button class="sp" data-t="'+w[0]+'">'+w[0]+' 🔊<small>'+w[1]+'</small></button>'});document.getElementById(box).innerHTML=h}
+card('words',[["make your bed","hacer la cama"],["make dinner","preparar la cena"],["clean your room","limpiar tu cuarto"],["clean the bathroom","limpiar el baño"],["take care of your brother","cuidar a tu hermano"],["do the shopping","hacer las compras"],["do the dusting","quitar el polvo"],["take out the trash","sacar la basura"],["cut the grass","cortar el pasto"],["feed the goldfish","dar de comer al pez"],["water the plants","regar las plantas"],["set the table","poner la mesa"],["clear the table","quitar la mesa"],["empty the dishwasher","vaciar el lavaplatos"],["hang out the laundry","tender la ropa"],["sweep the floor","barrer el piso"],["dry the dishes","secar los platos"]]);
+card('adj',[["annoyed / annoying","molesto / molesto(a)"],["embarrassed / embarrassing","avergonzado / vergonzoso"],["exhausted / exhausting","agotado / agotador"],["interested / interesting","interesado / interesante"],["satisfied / satisfying","satisfecho / satisfactorio"],["worried / worrying","preocupado / preocupante"],["confused / confusing","confundido / confuso"],["excited / exciting","emocionado / emocionante"],["frightened / scary","asustado / aterrador"],["relaxed / relaxing","relajado / relajante"],["tired / tiring","cansado / agotador"]]);
+var N=function(s){return s.toLowerCase().replace(/[’`]/g,"'").replace(/\s+/g,' ').trim()};
+function E(id,title,ins,items,box){
+ var d=document.createElement('div');d.className='ex';d.innerHTML='<h3>'+title+'</h3><p>'+ins+'</p>'+(box?'<div class="box">'+box+'</div>':'');
+ var rows=[];
+ items.forEach(function(x,i){
+  var p=x[0].split('___'),a=x[1],o=x[3],c;
+  if(o){c=document.createElement('select');c.innerHTML='<option value="">Elige…</option>'+o.map(function(t){return'<option>'+t+'</option>'}).join('')}
+  else{c=document.createElement('input');c.type='text';c.autocomplete='off';c.autocapitalize='off';c.spellcheck=false}
+  c.setAttribute('aria-label','Respuesta '+(i+1));
+  var r=document.createElement('div');r.className='it';
+  var q=document.createElement('span');q.className='q';q.append((i+1)+'. '+p[0],c,p.length>1?p[1]:'');
+  var b=document.createElement('button');b.className='ab';b.textContent='🔊';b.title='Escuchar';b.setAttribute('aria-label','Escuchar');
+  b.onclick=function(){sp(x[0].replace('___',a.split('|')[0]))};
+  var f=document.createElement('div');f.className='fb';
+  r.append(q,' ',b,f);d.appendChild(r);rows.push([c,f,x]);
+ });
+ var s=document.createElement('div');s.className='fb';
+ function mk(t,cls,fn){var b=document.createElement('button');b.className='bt '+cls;b.textContent=t;b.onclick=fn;d.appendChild(b)}
+ mk('✅ Revisar','',function(){var n=0;rows.forEach(function(r){var al=r[2][1].split('|').map(N),ok=al.indexOf(N(r[0].value))>-1;if(ok)n++;r[1].innerHTML='<span class="'+(ok?'ok':'no')+'">'+(ok?'✔ ¡Correcto! ':'✘ Respuesta: <b>'+r[2][1].split('|')[0]+'</b>. ')+'</span>'+r[2][2]});s.textContent='Tu resultado: '+n+' de '+rows.length+(n==rows.length?' 🎉':' 💪')});
+ mk('👀 Ver respuestas','g',function(){rows.forEach(function(r){r[0].value=r[2][1].split('|')[0];r[1].innerHTML=r[2][2]})});
+ mk('🧹 Borrar','g',function(){rows.forEach(function(r){r[0].value='';r[1].textContent=''});s.textContent=''});
+ d.appendChild(s);document.getElementById(id).appendChild(d);
+}
+var BX="Elige las palabras en la lista. Escribe o selecciona tu respuesta.";
+E('e1','Exercise 1 · Une las frases','Elige la palabra que completa cada frase (match).',[
+["make ___","dinner","<b>make dinner</b> = preparar la cena.",["bathroom","bed","dinner","room","shopping","sister"]],
+["clean your ___","room","<b>clean your room</b> = limpia tu cuarto.",["bathroom","bed","dinner","room","shopping","sister"]],
+["clean the ___","bathroom","<b>clean the bathroom</b> = limpiar el baño.",["bathroom","bed","dinner","room","shopping","sister"]],
+["take care of your ___","sister","<b>take care of</b> = cuidar de alguien.",["bathroom","bed","dinner","room","shopping","sister"]],
+["make your ___","bed","<b>make your bed</b> = hacer tu cama.",["bathroom","bed","dinner","room","shopping","sister"]],
+["do the ___","shopping","<b>do the shopping</b> = hacer las compras.",["bathroom","bed","dinner","room","shopping","sister"]]]);
+E('e2','Exercise 2 · Elige la correcta','Selecciona la palabra correcta.',[
+["We ___ the grass every week in spring.","cut","<b>cut the grass</b> = cortar el pasto. <i>Sweep</i> es barrer.",["sweep","cut"]],
+["I need to ___ out the laundry.","hang","<b>hang out</b> = tender la ropa.",["dry","hang"]],
+["Did you remember to ___ the goldfish?","feed","<b>feed</b> = dar de comer. <i>Water</i> es para plantas.",["feed","water"]],
+["Can you ___ out the trash, please?","take","<b>take out the trash</b> = sacar la basura.",["load","take"]],
+["Whose job is it to ___ the dusting in your house?","do","<b>do the dusting</b> = quitar el polvo.",["do","lay"]],
+["Do you have any dirty clothes? I want to ___ the laundry in.","put","<b>put the laundry in</b> = poner la ropa en la lavadora.",["put","load"]],
+["If you ___ the table, I'll wash the dishes.","clear","<b>clear the table</b> = quitar los platos de la mesa.",["clear","empty"]]]);
+E('e3','Exercise 3 · Completa con el verbo','Escribe el verbo que falta.',[
+["I always ___ out the trash – that's my job!","take","take out = sacar. Después de <i>always</i> va el verbo base."],
+["I love working in the yard, and I really enjoy ___ the grass.","cutting","Después de <i>enjoy</i> usamos verbo + <b>-ing</b>."],
+["I have to ___ my goldfish every day.","feed","Después de <i>have to</i> va el verbo base."],
+["While my dad is making dinner, I usually ___ the dog for a walk.","take","<b>take the dog for a walk</b> = pasear al perro."],
+["It's my sister's job to ___ the table.","set","<b>set the table</b> = poner la mesa."],
+["I don't like ___ the dishwasher, but it doesn't take long!","emptying","Después de <i>like</i> usamos -ing: emptying."],
+["My favorite job around the house is ___ out the laundry.","hanging","<i>is + -ing</i>: hanging out = tendiendo la ropa."],
+["Right now, my brother is ___ the bathroom floor.","sweeping","<i>Right now</i> = ahora → is + sweeping."]],"Cuadro: <b>cutting · emptying · feed · hanging · set · sweeping · take · take</b>");
+var W=["annoyed","embarrassed","exhausting","interesting","satisfied","worrying","confused","exciting","frightened","relaxing","tired"],S=["molesto","avergonzado","agotador","interesante","satisfecho","preocupante","confundido","emocionante","asustado","relajante","cansado"],ED=["ed","ed","ing","ing","ed","ing","ed","ing","ed","ing","ed"];
+E('e4','Exercise 4 · Sopa de letras','En la serpiente de letras (annoyed-embarrassed-exhausting…) hay 11 adjetivos en orden. Escríbelos completos; la pista es su terminación.',W.map(function(w,i){return["Palabra "+(i+1)+": ___ (termina en -"+ED[i]+")",w,"<b>"+w+"</b> = "+S[i]+"."]}));
+E('e5','Exercise 5 · Positivo o negativo','Clasifica cada adjetivo.',W.map(function(w,i){var pos=[3,4,7,9].indexOf(i)>-1;return[w+": ___",pos?"Positive 🙂":"Negative 🙁","<b>"+w+"</b> ("+S[i]+") es "+(pos?"positivo":"negativo")+".",["Positive 🙂","Negative 🙁"]]}));
+var P=["bed","room","bathroom"],O=["have to","has to"],O2=["don't have to","doesn't have to"];
+E('e6','Exercise 1 · have to','Elige la opción correcta.',[
+["I ___ read one chapter every day.","have to","Con <b>I</b> usamos have to.",O],
+["Rui ___ get up early on Saturdays as he has a weekend job.","has to","Con <b>Rui</b> (he) usamos has to.",O],
+["We ___ leave for school until 8:15 am.","don't have to","Con <b>we</b>: don't have to = no hace falta.",O2],
+["My parents ___ go shopping for my grandma every weekend.","have to","<b>My parents</b> = they → have to.",O],
+["My brother ___ clean the bathroom because he's only five.","doesn't have to","<b>My brother</b> = he → doesn't have to.",O2]]);
+E('e7','Exercise 2 · Diálogo','Completa con: do (x2), does, doesn\'t, don\'t, have, what.',[
+["A: Do you ___ to do jobs in the house?","have","Pregunta: Do + you + <b>have to</b>."],
+["B: Yes, I ___.","do","Respuesta corta afirmativa: Yes, I <b>do</b>."],
+["A: ___ do you have to do?","What","<b>What</b> = ¿qué?"],
+["A: ___ you have to do the recycling?","Do","Pregunta de sí/no con you → <b>Do</b>."],
+["B: No, I ___. That's my sister's job!","don't","Respuesta corta negativa: No, I <b>don't</b>."],
+["A: ___ your sister have to take out the trash, too?","Does","<b>your sister</b> = she → <b>Does</b>."],
+["B: No, she ___. My dad does that.","doesn't","No, she <b>doesn't</b>."]]);
+E('e8','Exercise 3 · ¿Es un plan?','¿La frase expresa un plan?',[
+["We're going to Austria on Sunday.","Plan","Plan: ya está decidido.",["Plan","No es plan"]],
+["My dad's taking us to the movie theater this Friday.","Plan","Presente continuo con fecha = plan.",["Plan","No es plan"]],
+["I'll help you with those bags.","No es plan","<b>I'll</b> = oferta espontánea.",["Plan","No es plan"]],
+["Juan is spending two weeks with his grandparents in July.","Plan","Presente continuo + fecha = plan.",["Plan","No es plan"]],
+["I'm going to finish my book today.","Plan","<b>going to</b> = plan.",["Plan","No es plan"]],
+["Mom will be back at 6:00 pm.","No es plan","<b>will</b> = predicción.",["Plan","No es plan"]]]);
+E('e9','Exercise 4 · going to','Escribe going to + el verbo (puedes usar \'s, \'m, \'re). Ej: \'re going to move.',[
+["We ___ house in the fall. (move)","'re going to move|are going to move","we + are going to + verbo."],
+["My cousin ___ married next year. (get)","'s going to get|is going to get","cousin = he/she → is going to get."],
+["What ___ for his birthday? (Tim / do)","is Tim going to do|'s Tim going to do","Pregunta: is + sujeto + going to + verbo."],
+["I ___ for a walk because it's a beautiful day. (go)","'m going to go|am going to go","I + am going to go."],
+["You ___ in those shorts. It's freezing! (not go out)","aren't going to go out|are not going to go out","Negativo: aren't going to + verbo."]]);
+var R=["Don't worry, I'll lend you some.","I'll bring the laundry in.","I'll take you.","Your parents won't be happy!","We'll look for them together."];
+E('e10','Exercise 5 · Une las frases','Elige la respuesta adecuada.',[
+["The bus is late and I need to get to athletics training. ___","I'll take you.","Ofreces ayuda en el momento: <b>I'll</b>.",R],
+["My sister's failed her exams. ___","Your parents won't be happy!","Es una predicción: <b>won't</b>.",R],
+["I don't have enough money for the bus. ___","Don't worry, I'll lend you some.","Oferta espontánea.",R],
+["It's started raining. ___","I'll bring the laundry in.","Decisión inmediata.",R],
+["Ivan's lost his keys. ___","We'll look for them together.","Ofreces ayuda: <b>we'll</b>.",R]]);
+var A=["ed","ing"];
+E('h1','Tarea 1 · ¿-ed o -ing?','Completa la terminación.',[
+["Don't get annoy___ with me. I didn't do anything!","ed","Tú te sientes así → <b>-ed</b>.",A],
+["It's really embarrass___ when you fall over in public.","ing","La situación es así → <b>-ing</b>.",A],
+["Don't be scar___. I'm here with you.","ed","Describe cómo se siente la persona → scared.",A],
+["It would be nice to have a relax___ vacation on the beach.","ing","Describe la vacación → relaxing.",A],
+["I find all this homework very tir___.","ing","Describe la tarea → tiring.",A],
+["This is a very excit___ movie!","ing","Describe la película → exciting.",A]]);
+E('h2','Tarea 2 · Completa la frase','Usa: annoyed, confused, embarrassing, excited, exhausting, interested, relaxed, satisfying, scary, tired, worried (hay 3 de sobra).',[
+["Are you ___ about the test tomorrow? It will be fine!","worried","Cómo te sientes: worried."],
+["I sometimes have a hot bath to help me feel ___.","relaxed","<i>feel</i> + cómo me siento → relaxed."],
+["Was the horror movie ___?","scary","Describe la película → scary."],
+["I'm ___. I think I'll go to bed.","tired","Me siento cansado → tired."],
+["This housework is ___! I need to sleep!","exhausting","Describe el trabajo → exhausting."],
+["I'm very ___ in history, especially the Roman era.","interested","Me siento → interested."],
+["You look ___. Can I help you to understand?","confused","Te ves confundido → confused."],
+["That was a very ___ meal. Thank you!","satisfying","Describe la comida → satisfying."]]);
+E('h3','Tarea 3 · will o going to','Escribe la forma correcta (\'ll / \'s going to).',[
+["A: Do you want to watch a movie tonight? B: Sorry, no. My dad ___ us out for dinner. (take)","'s going to take|is going to take","Plan ya hecho → going to."],
+["A: I'm going to go climbing with Kieran. B: Oh really? I ___ with you. (come)","'ll come|will come","Decisión en el momento → will."],
+["A: Has Ena decided what to do? B: Yes, she ___ English in Poland. (teach)","'s going to teach|is going to teach","Ya decidió → going to."],
+["A: This suitcase is really heavy! B: Here, I ___ you. (help)","'ll help|will help","Oferta espontánea → will."],
+["A: I'm going to be late tonight. B: OK, I ___ Mom. (tell)","'ll tell|will tell","Promesa → will."]]);
+</script></body></html>
